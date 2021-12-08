@@ -27,7 +27,7 @@ class PacienteService {
             val response = doctorRepository.findById(paciente.iddoctor)
                 ?: throw Exception("El ID ${paciente.iddoctor} en la tabla doctores no existe")
 
-            if (paciente.nombre.equals("") || paciente.edad!! > 0){
+            if (paciente.nombre.equals("") || paciente.edad!! < 0){
                 throw Exception("Los campos no cumplen las condiciones")
             }
             else {
