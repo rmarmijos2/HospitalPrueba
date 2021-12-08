@@ -38,7 +38,6 @@ class PacienteService {
             throw ResponseStatusException(
                 HttpStatus.NOT_FOUND, ex.message, ex)
         }
-
     }
 
     fun update(@RequestBody paciente: Paciente): Paciente {
